@@ -27,6 +27,12 @@
 > `git config --global user.email "[email]"`  
 > *set email to use for credit during push/pull/commits/etc for all local repositories*
 
+> `git config --global user.username "[github username]"`  
+> *set username to use for credit during push/pull/commits/etc for all local repositories*
+
+> `git config --global user.password "[access token]"`  
+> *set access token to use for this username to authenticate with during push/pull/commits/etc for all local repositories*
+
 > `git init`  
 > *set up current directory as a git repository*
 
@@ -56,15 +62,30 @@ Below steps assume basefolder has been created:
 > *checks the current directory for any local changes since last push*  
 > `git add index.js index.html`  
 > *adds files to the list of files to push, can use . like shown above for all changed files*  
+> `git reset package-lock.json`  
+> *removes file(s) from the list of files to push*  
+> *if no files are specified, all files are removed from the list, no changes made to local files*  
 > `git commit -m "Adding Home Page and supporting JS"`  
 > *sets the commit message to use when pushing these updates*  
 > `git push`  
-> *pushes local changes to repository.  
+> *pushes local changes to repository*  
+
 ## Managing Push Conflicts
 
 ## Pulling/Downloading changes to local project
 > `git pull`  
-> *pulls/downloads repository changes to the local project*
+> *pulls/downloads repository changes to the local project*  
+
 ## Managing Pull Conflicts
 
+## History
+> `git log`  
+> *displays commit history*  
+
+## Using Branches
+> `git branch`  
+> *lists all repo branches*  
+> `git checkout -b myBranch`  
+> *checkout "myBranch" branch and create if doesn't exist*  
+> *remove `-b` flag to ensure you only checkout if branch exists (don't create)*  
 
